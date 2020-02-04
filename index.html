@@ -55,7 +55,7 @@
 
           <div id="filedrag">
             <h2>Drop files here</h2>
-            <h2>or click to upload!</h2> 
+            <h2>or click to upload!</h2>
             <input type="file" accept=".txt,.zip" id="file-input" hidden>
           </div>
           <p> </p>
@@ -81,24 +81,13 @@
     <!-- feedback form --->
     <div id="feedback">
       <div id="feedback-form" style='display:none;background:white;' class="col-xs-4 panel panel-default">
-
-        <form role="form" method="post" id="reused_form" class="form panel-body pt-1">
-            <div class="form-group">
-                <label for="comments"> Comments:</label>
-                <textarea class="form-control" type="textarea" id="comments" placeholder="Any ideas? Missing something? Tool does not work?" name="comments" maxlength="6000"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="email"> Email:</label>
-                <input type="email" class="form-control" placeholder="Your e-mail" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <button type="submit" class="btn btn-lg btn-warning pull-right pb-2 mb-2" iaria-hidden="true"></i>Send</button>
-            </div>
+        <form action="mailto:chatanalyzer@moritzwolf.com" method="GET">
+          <label for="subject">Your email:</label>
+          <input name="subject" type="text" class="form-control"/>
+          <label for="comments">Comments:</label>
+          <textarea class="form-control" type="textarea" id="comments" placeholder="Any ideas? Missing something? Tool does not work?" name="body" maxlength="6000"></textarea>
+          <input type="submit" value="Send me an email"  class="btn btn-lg btn-warning pull-right pb-2 mb-2"/>
         </form>
-        <div id="success_message" style="width:100%; height:100%; display:none; "> <h3 class="text-secondary text-center pt-3">Posted your feedback successfully!</h3> </div>
-        <div id="error_message" style="width:100%; height:100%; display:none; "> <h3 class="text-secondary text-center">Error</h3> Sorry there was an error sending your form. </div>
-
       </div>
       <div id="feedback-tab">Feedback</div>
     </div>
@@ -370,7 +359,7 @@
 
     <script src="js/html2canvas.min.js"></script>
     <script src="js/FileSaver.min.js"></script>
-    <script src="js/screenshot0.js"></script>
+    <!---<script src="js/screenshot0.js"></script>--->
     <script src="js/screenshot1.js"></script>
     <script src="js/screenshot2.js"></script>
     <script src="js/screenshot3.js"></script>
